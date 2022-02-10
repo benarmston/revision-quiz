@@ -1,6 +1,6 @@
 questions = {
     'When was the Treaty of Versailles? \n' : ['1919'],
-    'Who was the Treaty of Versialles with? \n' : ['germany'],
+    'Who was the Treaty of Versailles with? \n' : ['germany'],
     'Who was the Treaty of Saint Germain with? \n' : ['austria'],
     'Who was the Treaty of Neuilly with? \n' : ['bulgaria'],
     'Who was the Treaty of Sevres with? \n' : ['turkey'],
