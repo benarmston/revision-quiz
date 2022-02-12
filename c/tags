@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+DEFAULT_PROGNAME	example.c	/^#define DEFAULT_PROGNAME /;"	d	file:
+DEFAULT_PROGNAME	main.c	/^#define DEFAULT_PROGNAME /;"	d	file:
+ERR_DO_THE_NEEDFUL	example.c	/^#define ERR_DO_THE_NEEDFUL /;"	d	file:
+ERR_DO_THE_NEEDFUL	main.c	/^#define ERR_DO_THE_NEEDFUL /;"	d	file:
+ERR_FOPEN_INPUT	example.c	/^#define ERR_FOPEN_INPUT /;"	d	file:
+ERR_FOPEN_INPUT	main.c	/^#define ERR_FOPEN_INPUT /;"	d	file:
+ERR_FOPEN_OUTPUT	example.c	/^#define ERR_FOPEN_OUTPUT /;"	d	file:
+ERR_FOPEN_OUTPUT	main.c	/^#define ERR_FOPEN_OUTPUT /;"	d	file:
+OPTSTR	example.c	/^#define OPTSTR /;"	d	file:
+OPTSTR	main.c	/^#define OPTSTR /;"	d	file:
+OPTSTR	simple.c	/^#define OPTSTR /;"	d	file:
+USAGE_FMT	example.c	/^#define USAGE_FMT /;"	d	file:
+USAGE_FMT	main.c	/^#define USAGE_FMT /;"	d	file:
+__anon0d38083b0108	main.c	/^typedef struct {$/;"	s	file:
+__anond74be0820108	example.c	/^typedef struct {$/;"	s	file:
+do_the_needful	example.c	/^int do_the_needful(options_t *options) {$/;"	f	typeref:typename:int
+do_the_needful	main.c	/^int do_the_needful(options_t *options) {$/;"	f	typeref:typename:int
+dumb_global_variable	example.c	/^int dumb_global_variable = -11;$/;"	v	typeref:typename:int
+dumb_global_variable	main.c	/^int dumb_global_variable = -11;$/;"	v	typeref:typename:int
+flags	example.c	/^  uint32_t      flags;$/;"	m	struct:__anond74be0820108	typeref:typename:uint32_t	file:
+flags	main.c	/^   uint32_t flags;$/;"	m	struct:__anon0d38083b0108	typeref:typename:uint32_t	file:
+input	example.c	/^  FILE         *input;$/;"	m	struct:__anond74be0820108	typeref:typename:FILE *	file:
+input	main.c	/^   FILE	    *input;$/;"	m	struct:__anon0d38083b0108	typeref:typename:FILE *	file:
+longopts	simple.c	/^int longopts(char *optarg) {$/;"	f	typeref:typename:int
+main	example.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	main.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	simple.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+options_t	example.c	/^} options_t;$/;"	t	typeref:struct:__anond74be0820108	file:
+options_t	main.c	/^} options_t;$/;"	t	typeref:struct:__anon0d38083b0108	file:
+output	example.c	/^  FILE         *output;$/;"	m	struct:__anond74be0820108	typeref:typename:FILE *	file:
+output	main.c	/^   FILE	    *output;$/;"	m	struct:__anon0d38083b0108	typeref:typename:FILE *	file:
+quiz	main.c	/^int quiz() {$/;"	f	typeref:typename:int
+usage	example.c	/^void usage(char *progname, int opt) {$/;"	f	typeref:typename:void
+usage	main.c	/^void usage(char *progname, int opt) {$/;"	f	typeref:typename:void
+verbose	example.c	/^  int           verbose;$/;"	m	struct:__anond74be0820108	typeref:typename:int	file:
+verbose	main.c	/^   int	    verbose;$/;"	m	struct:__anon0d38083b0108	typeref:typename:int	file:
+version	main.c	/^int version() {$/;"	f	typeref:typename:int
