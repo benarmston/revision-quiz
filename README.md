@@ -24,6 +24,10 @@ Currently, the python version is the most complete. However, I hope to
 soon have the go version completed so that I can distribute it as an
 executable file.
 
+## Where can I find the source code for this project?
+
+The source code can be found at [github.com/crus4d3/revision-quiz](https://github.com/crus4d3/revision-quiz)
+
 ## What is the future for this project?
 
 Currently I am porting the project over to go. Once that is finished,
