@@ -1,0 +1,46 @@
+---
+- name: History
+  questions:
+      - prompt: When was the Paris Peace Conference?
+        answers:
+            - 1919
+      - prompt: Which central power was the Treaty of Versailles with?
+        answers:
+            - germany
+      - prompt: Which central power was the Treaty of Saint Germain with?
+        answers:
+            - austria
+      - prompt: Which central power was the Treaty of Neuilly with?
+        answers:
+            - bulgaria
+      - prompt: Which central power was the Treaty of Sevres with?
+        answers:
+            - turkey
+      - prompt: Which central power was the Treaty of Lausanne with?
+        answers:
+            - turkey
+      - prompt: Who was the leader of Britain in the Paris peace conference?
+        answers:
+            - david lloyd george
+            - lloyd george
+      - prompt: Who was the leader of France in the Paris peace conference?
+        answers:
+            - georges clemenceau
+            - clemenceau
+      - prompt: Who was the leader of the USA in the Paris peace conference?
+        answers:
+            - woodrow wilson
+            - wilson
+
+- name: Science
+  questions:
+      - prompt: What biological process removes carbon dioxide from the atmosphere?
+        answers:
+            - photosynthesis
+      - prompt: How is energy lost along a food chain?
+        answers:
+            - respiration
+            - urine
+            - faeces
+            - not all biomass eaten
+            - not all biomass consumed

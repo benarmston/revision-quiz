@@ -5,16 +5,11 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
-contains	main.go	/^func contains (search string, slice []string) bool {$/;"	f	package:main	typeref:typename:bool
-contains	test.go	/^func contains (search string, slice []string) bool {$/;"	f	package:main	typeref:typename:bool
-getRandKeys	main.go	/^func getRandKeys (questions map[string][]string) []string {$/;"	f	package:main	typeref:typename:[]string
-help	main.go	/^func help (name string) {$/;"	f	package:main
-main	main.go	/^func main() {$/;"	f	package:main
-main	main.go	/^package main$/;"	p
-main	test.go	/^func main () {$/;"	f	package:main
-main	test.go	/^package main$/;"	p
-runQuiz	main.go	/^func runQuiz () {$/;"	f	package:main
-test	main.go	/^func test () bool {$/;"	f	package:main	typeref:typename:bool
-test1	main.go	/^func test1 () bool {$/;"	f	package:main	typeref:typename:bool
-unkownArg	main.go	/^func unkownArg (arg string) {$/;"	f	package:main
-version	main.go	/^func version () {$/;"	f	package:main
+Combine	utils/utils.go	/^func Combine(map1 map[string][]string, map2 map[string][]string) map[string][]string {$/;"	f	package:utils	typeref:typename:map[string][]string
+Contains	utils/utils.go	/^func Contains(slice []string, search string) bool {$/;"	f	package:utils	typeref:typename:bool
+GetRandKeys	utils/utils.go	/^func GetRandKeys(questions map[string][]string) []string {$/;"	f	package:utils	typeref:typename:[]string
+GetSubjects	utils/utils.go	/^func GetSubjects(questions questions.QuestionsTemplate) []map[string][]string {$/;"	f	package:utils	typeref:typename:[]map[string][]string
+Help	utils/utils.go	/^func Help(name string) {$/;"	f	package:utils
+UnkownArg	utils/utils.go	/^func UnkownArg(arg string) {$/;"	f	package:utils
+Version	utils/utils.go	/^func Version() {$/;"	f	package:utils
+utils	utils/utils.go	/^package utils$/;"	p
