@@ -13,7 +13,7 @@ class Questions:
             "Who was the leader of the USA in the Paris peace conference?\n" : ["woodrow wilson", "wilson"],
         }
         self.scienceQuestions = {
-            "What process removes carbon dioxide from the atmosphere?\n" : ["photosynthesis"],
+            "What biological process removes carbon dioxide from the atmosphere?\n" : ["photosynthesis"],
             "How is energy lost along a food chain?\n" : ["respiration", "urine", "faeces", "not all biomass eaten"],
         }
         self.questionList = [self.historyQuestions, self.scienceQuestions]

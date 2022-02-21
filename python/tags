@@ -5,10 +5,20 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
+Question	utils.py	/^class Question():$/;"	c
 Questions	questions.py	/^class Questions:$/;"	c
+Quiz	utils.py	/^class Quiz():$/;"	c
+Subject	utils.py	/^class Subject():$/;"	c
 __init__	questions.py	/^    def __init__(self):$/;"	m	class:Questions
-getSubjects	__main__.py	/^def getSubjects(questions):$/;"	f
+__init__	utils.py	/^    def __init__(self, prompt, answers):$/;"	m	class:Question
+__init__	utils.py	/^    def __init__(self, questions):$/;"	m	class:Subject
+__init__	utils.py	/^    def __init__(self, subjectList):$/;"	m	class:Quiz
+createQuestions	utils.py	/^    def createQuestions(self, questionList):$/;"	m	class:Subject
+createSubjects	utils.py	/^    def createSubjects(self, subjectList):$/;"	m	class:Quiz
+getQuestions	utils.py	/^def getQuestions():$/;"	f
+getSubjects	utils.py	/^def getSubjects(questions):$/;"	f
 main	__main__.py	/^def main():$/;"	f
+newQuiz	quiz.py	/^def newQuiz(questions):$/;"	f
 parseArgs	__main__.py	/^def parseArgs():$/;"	f
-quiz	__main__.py	/^def quiz(questions):$/;"	f
-version	__main__.py	/^def version():$/;"	f
+quiz	quiz.py	/^def quiz(questions):$/;"	f
+version	utils.py	/^def version():$/;"	f
