@@ -16,9 +16,10 @@ __init__	utils.py	/^    def __init__(self, subjectList):$/;"	m	class:Quiz
 createQuestions	utils.py	/^    def createQuestions(self, questionList):$/;"	m	class:Subject
 createSubjects	utils.py	/^    def createSubjects(self, subjectList):$/;"	m	class:Quiz
 getQuestions	utils.py	/^def getQuestions():$/;"	f
-getSubjects	utils.py	/^def getSubjects(questions):$/;"	f
+getSubjects	utils.py	/^def getSubjects(quiz):$/;"	f
 main	__main__.py	/^def main():$/;"	f
-newQuiz	quiz.py	/^def newQuiz(questions):$/;"	f
 parseArgs	__main__.py	/^def parseArgs():$/;"	f
-quiz	quiz.py	/^def quiz(questions):$/;"	f
+runQuiz	quiz.py	/^def runQuiz(questions):$/;"	f
+useDefaultQuestions	utils.py	/^    def useDefaultQuestions():$/;"	f	function:getQuestions	file:
+validateFile	utils.py	/^    def validateFile(questions):$/;"	f	function:getQuestions	file:
 version	utils.py	/^def version():$/;"	f

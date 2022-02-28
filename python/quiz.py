@@ -14,11 +14,10 @@ def runQuiz(questions):
         correct = False
         print(question.prompt)
         response = input()
-        response = response.strip()
         if response.lower() in ["q", "quit"]:
             break
         for answer in question.answers:
-            if response.lower() == str(answer):
+            if response.lower().strip() == str(answer).lower().strip():
                 print("Correct!")
                 correct = True
                 score += 1

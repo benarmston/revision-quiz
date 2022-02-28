@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import yaml
+from jsonschema import validate, exceptions
+
+from questions import Questions
 
 def version():
     print("Version 0.9.0")
@@ -55,10 +58,10 @@ class Quiz():
 class Subject():
     def __init__(self, questions):
         self.name = questions["name"]
-        questions.pop("name")
         self.questions = self.createQuestions(questions)
 
     def createQuestions(self, questionList):
+        questionList.pop("name")
         questionList = questionList["questions"]
         fmtQuestions = []
         for question in questionList:
@@ -74,10 +77,65 @@ class Question():
         self.answers = answers
 
 def getQuestions():
+    def useDefaultQuestions():
+        print("Using default question set")
+        defaultQuestions = Questions()
+        quiz = Quiz(defaultQuestions.subjectList)
+        return quiz
+
+    def validateFile(questions):
+        schema = {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "questions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "prompt": {"type": "string"},
+                                "answers": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": ["string", "number"]
+                                    }
+                                }
+                            },
+                            "required": ["prompt", "answers"],
+                            "additionalProperties": False
+                        }
+                    }
+                },
+                "required": ["name", "questions"],
+                "additionalProperties": False
+            }
+        }
+        try:
+            error = validate(questions, schema)
+            return True, error
+        except exceptions.ValidationError as error:
+            return False, error
+
     with open("questions.yaml", "r") as questions:
         try:
             subjects = yaml.safe_load(questions)
-            quiz = Quiz(subjects)
+            ok, error = validateFile(subjects)
+            if ok:
+                quiz = Quiz(subjects)
+                print("Using custom question set in questions.yaml")
+                return quiz
+            else:
+                print("Error:", error)
+                print()
+                quiz = useDefaultQuestions()
+                return quiz
+        except yaml.scanner.ScannerError as error:
+            print("Error:", error, "\n")
+            quiz = useDefaultQuestions()
             return quiz
         except yaml.YAMLError as error:
-            print(error)
+            print("Error:", error)
+            quiz = useDefaultQuestions()
+            return quiz

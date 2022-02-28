@@ -49,5 +49,6 @@
   questions:
       - prompt: How long should you spend on a ten mark A02?
         answers:
+            - 12
             - 12 mins
             - 12 minutes

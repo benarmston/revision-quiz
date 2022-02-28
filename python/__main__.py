@@ -39,8 +39,6 @@ def main():
     args = parseArgs()
     quiz = getQuestions()
     questionsList = []
-    questionDict = {}
-    questions = Questions()
     if args.version:
         version()
         quit()
