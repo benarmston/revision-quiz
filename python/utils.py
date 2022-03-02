@@ -6,7 +6,7 @@ from jsonschema import validate, exceptions
 from questions import Questions
 
 def version():
-    print("Version 0.9.0")
+    print("Version 1.0.0")
     print("This project is still in active development")
     print("Visit https://github.com/crus4d3/revision-quiz for the latest version")
 
@@ -17,20 +17,24 @@ def getSubjects(quiz):
 
     while done == False:
         print("Which subjects do you want to revise", *subjectNames, "or all?", sep=", ")
-        inputSubject = input("Type 'done' to continue\n")
+        print("Type 'done' to continue")
+        inputSubject = input()
         inputSubject = inputSubject.strip()
 
         if inputSubject in ["q", "quit"]:
             quit()
         elif inputSubject in ["a", "all"]:
-            print("All chosen!\n")
+            print("All chosen!")
+            print()
             done = True
         elif inputSubject in ["d", "done"]:
             if chosenSubjects != []:
                 done = True
-                print("Subjects chosen!\n")
+                print("Subjects chosen!")
+                print()
             else:
-                print("\nYou must choose at least one subject")
+                print()
+                print("You must choose at least one subject")
         else:
             found = False
             for subject in quiz.subjectList:
@@ -40,7 +44,8 @@ def getSubjects(quiz):
                     print()
                     print(inputSubject, "chosen!")
             if found == False:
-                print("\nUnkown option:", inputSubject)
+                print("Unkown option:", inputSubject)
+                print()
 
     return chosenSubjects
 
@@ -132,7 +137,8 @@ def getQuestions():
                 quiz = useDefaultQuestions()
                 return quiz
         except yaml.scanner.ScannerError as error:
-            print("Error:", error, "\n")
+            print("Error:", error)
+            print()
             quiz = useDefaultQuestions()
             return quiz
         except yaml.YAMLError as error:
