@@ -123,25 +123,43 @@ def getQuestions():
         except exceptions.ValidationError as error:
             return False, error
 
-    with open("questions.yaml", "r") as questions:
-        try:
-            subjects = yaml.safe_load(questions)
-            ok, error = validateFile(subjects)
-            if ok:
-                quiz = Quiz(subjects)
-                print("Using custom question set in questions.yaml")
-                return quiz
-            else:
+    #print("ran")
+    #try:
+    #    global questions
+    #    print("found")
+    #except FileNotFoundError as error:
+    #    print("not found")
+    #    print("Error:", error)
+    #    print()
+    #    quiz = useDefaultQuestions()
+    #    return quiz
+
+    try:
+        with open("questions.yaml", "r") as questions:
+            try:
+                subjects = yaml.safe_load(questions)
+                ok, error = validateFile(subjects)
+                if ok:
+                    quiz = Quiz(subjects)
+                    print("Using custom question set in questions.yaml")
+                    return quiz
+                else:
+                    print("Error:", error)
+                    print()
+                    quiz = useDefaultQuestions()
+                    return quiz
+            except yaml.scanner.ScannerError as error:
                 print("Error:", error)
                 print()
                 quiz = useDefaultQuestions()
                 return quiz
-        except yaml.scanner.ScannerError as error:
-            print("Error:", error)
-            print()
-            quiz = useDefaultQuestions()
-            return quiz
-        except yaml.YAMLError as error:
-            print("Error:", error)
-            quiz = useDefaultQuestions()
-            return quiz
+            except yaml.YAMLError as error:
+                print("Error:", error)
+                print()
+                quiz = useDefaultQuestions()
+                return quiz
+    except FileNotFoundError as error:
+        print("Error:", error)
+        print()
+        quiz = useDefaultQuestions()
+        return quiz

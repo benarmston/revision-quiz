@@ -3,8 +3,8 @@ package utils
 import (
     "bufio"
     "fmt"
-    "gopkg.on/yaml.v3"
-    "io/ioutil"
+    //"gopkg.on/yaml.v3"
+    //"io/ioutil"
     "math/rand"
     "os"
     "strings"
@@ -26,7 +26,20 @@ func Contains(needle string, haystack []string) bool {
     return false
 }
 
-func Combine(map1 map[string][]string, map2 map[string][]string) map[string][]string {
+func Combine(map1 []map[string][]string, map2 []map[string][]string) []map[string][]string {
+    if map1 == nil {
+        return map2
+    }
+    for k, v := range map2 {
+        map1[k] = v
+    }
+    return map1
+}
+
+func CombineMap(map1 map[string][]string, map2 map[string][]string) map[string][]string {
+    if map1 == nil {
+        return map2
+    }
     for k, v := range map2 {
         map1[k] = v
     }
@@ -44,7 +57,7 @@ func GetRandKeys(questions map[string][]string) []string {
     return keys
 }
 
-func GetSubjects(questions questions.QuestionsTemplate) []map[string][]string {
+func GetSubjects(questions questions.QuestionsTemplate) [][]map[string][]string {
     finished := false
     reader := bufio.NewReader(os.Stdin)
 
@@ -55,7 +68,7 @@ func GetSubjects(questions questions.QuestionsTemplate) []map[string][]string {
     quitMSG := []string{"q", "quit"}
 
     var subject string
-    var subjectList []map[string][]string
+    var subjectList [][]map[string][]string
 
     for finished == false {
         fmt.Println("Which subjects do you want to revise 'history', 'science' or 'all'?")
@@ -88,5 +101,4 @@ func GetSubjects(questions questions.QuestionsTemplate) []map[string][]string {
     return subjectList
 }
 
-func ReadYaml(quiz *questions.Quiz) *questions.Quiz {
-}
+//func ReadYaml(quiz *questions.Quiz) *questions.Quiz {}
